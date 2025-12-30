@@ -1,12 +1,12 @@
 import uvicorn
 from fastapi import FastAPI
-from api import movies, neo4j
+from api import mongo, neo4j
 import uvicorn
 
 
 backend = FastAPI(title= "films")
 
-backend.include_router(movies.router)
+backend.include_router(mongo.router)
 backend.include_router(neo4j.router)
 
 

@@ -3,7 +3,7 @@ from backend_api.databases.mongodb import films
 from pydantic import BaseModel
 from typing import Optional
 
-router = APIRouter(prefix="/films", tags= ["Films"])
+router = APIRouter(prefix="/films", tags= ["Les API FastAPI avec MongoDB"])
 
 @router.get("/")
 def liste_de_tous_les_films(
