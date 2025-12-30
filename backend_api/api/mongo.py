@@ -22,9 +22,9 @@ def rechercher_un_film(
         requete = {}
 
         if film:
-            requete["title"] = film
+            requete["title"] = {"$regex": film, "$options": "i"}
         elif acteur:
-            requete["cast"] = acteur
+            requete["cast"] = {"$regex": acteur, "$options": "i"}
 
         return list(films.find(requete, {"_id": 0}))
 
