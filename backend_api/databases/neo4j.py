@@ -1,3 +1,7 @@
-NEO4J_URI = "bolt://174.129.90.69:7687"
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "bilge-talks-duplicates"
+from neo4j import GraphDatabase
+
+uri = "neo4j+s://648d4dab.databases.neo4j.io"
+user = "neo4j"
+password = "WIwruIxla59y-fcWvI_b0Euzd8YkQ3PXbnj--0StwYE"
+
+driver = GraphDatabase.driver(uri, auth=(user, password))
